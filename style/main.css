@@ -1,0 +1,64 @@
+/*@font-face {*/
+    /*font-family: 'Akkurat-Mono';*/
+    /*src: url('http://rozon.org/fonts/Akkurat-Mono.eot'); !* IE9 Compat Modes *!*/
+    /*src: url('http://rozon.org/fonts/Akkurat-Mono?#iefix') format('embedded-opentype'), !* IE6-IE8 *!*/
+    /*url('http://rozon.org/fonts/Akkurat-Mono.woff2') format('woff2'), !* Super Modern Browsers *!*/
+    /*url('http://rozon.org/fonts/Akkurat-Mono.woff') format('woff'), !* Pretty Modern Browsers *!*/
+    /*url('http://rozon.org/fonts/Akkurat-Mono.ttf')  format('truetype'), !* Safari, Android, iOS *!*/
+    /*url('http://rozon.org/Akkurat-Mono.svg#svgFontName') format('svg'); !* Legacy iOS *!*/
+/*}*/
+
+body {
+    background-color: rgb(102,54,232);
+    font-family: 'Akkurat-Mono', monospace;
+}
+
+div#container{
+    width: 500px;
+    height: 500px;
+    cursor: none;
+    transform: translate3d(0, 0, 0);
+}
+
+
+canvas#enemies {
+    z-index: 0;
+    position: absolute;
+    border: 1px solid aquamarine;
+}
+
+canvas#objectives {
+    z-index: 1;
+    position: absolute;
+}
+
+canvas#pointer {
+    z-index: 2;
+    position: absolute;
+}
+
+div#info {
+    position: absolute;
+    top: 525px;
+    left: 7%;
+}
+
+.markers {
+    display: inline-block;
+    float: left;
+    padding: 0;
+    margin: 0 0 0 0;
+    color: aquamarine;
+    font-size: 13px;
+    text-transform: uppercase;
+    /*these are the disable text select unique identifiers*/
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+h6#health {
+    margin-left: 100px;
+}

@@ -1,0 +1,31 @@
+// need timer
+// setInterval(function(event) {
+//     // loop through enemies
+//     // foreach
+//         // move x,y
+//     // redraw canvas
+// }, 1000); // 1000ms = 1sec - change in case of screen tearing
+
+// setInterval(function(){
+//
+//     console.log('interval');
+//
+//     for (i = 0; i < 20; i++) {
+//         drawEnemies(i);
+//     }
+//
+//
+//     for (j = 0; j < enemiesList.length; j++) {
+//         enemiesList[j].x += 1;
+//         enemiesList[j].y += 1;
+//         console.log(enemiesList[j].x);
+//         console.log('made it this far');
+//     }
+//
+//     tcv.clearRect(0,0,500,500);
+//
+//     drawEnemies();
+//
+// }, 1000);
+
+// 1000ms = 1sec - change in case of screen tearing
