@@ -44,7 +44,6 @@ function animateEnemies() {
     for (var i=0; i < enemiesList.length; i++) {
     enemiesList[i].x += enemiesList[i].xSpeed;
     enemiesList[i].y += enemiesList[i].ySpeed;
-
     }
 }
 
@@ -71,6 +70,16 @@ function detectCollision(){
         }
     }
 }
+
+// function detectObjectiveCollision(){
+//
+//     for(j=0; j < objectivesList.length; j++) {
+//
+//         if () {
+//
+//         }
+//     }
+// }
 
 // These are the functions for the objectives
 
@@ -99,7 +108,7 @@ function Objective(x, y, r){
 // This is creating the objectives and pushing it into the array
 
 for(var i=0; i < 10; i++) {
-    objectivesList.push(new Objective(objectiveRange(1, 400), objectiveRange(1,400), 5));
+    objectivesList.push(new Objective(objectiveRange(10, 490), objectiveRange(10,490), 7.5));
 }
 
 function drawObjectives(){
