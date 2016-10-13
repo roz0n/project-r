@@ -30,10 +30,6 @@ function moveSomething(e) {
     e.preventDefault();
 }
 
-// if () {
-//
-// }
-
 function User(x, y, r){
     this.x = x;
     this.y = y;
@@ -45,7 +41,6 @@ function User(x, y, r){
         // true or false is clockwise or counterclockwise
         ctx2.fillStyle = 'orange';
         ctx2.fill();
-        ctx2.shadowBlur = 10;
     }
 }
 

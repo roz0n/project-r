@@ -107,7 +107,9 @@ function drawObjectives(){
     }
 }
 
-// This is drawing both objects ultimately
+// This is drawing the objects ultimately
+
+var pointer = new User(150,350,10);
 
 function draw() {
     drawObjectives();
@@ -115,7 +117,7 @@ function draw() {
     animateEnemies();
     ctx2.fillStyle = 'rgba(102,54,232, 0.3)';
     ctx2.fillRect(0, 0, 500, 500);
-    var pointer = new User(150,350,10).draw();
+    pointer.draw();
     raf = window.requestAnimationFrame(draw);
     detectCollision();
 }
