@@ -108,7 +108,7 @@ function Objective(x, y, r){
 // This is creating the objectives and pushing it into the array
 
 for(var i=0; i < 10; i++) {
-    objectivesList.push(new Objective(objectiveRange(10, 490), objectiveRange(10,490), 7.5));
+    objectivesList.push(new Objective(objectiveRange(50, 490), objectiveRange(50,490), 8));
 }
 
 function drawObjectives(){

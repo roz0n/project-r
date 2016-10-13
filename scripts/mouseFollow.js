@@ -25,18 +25,9 @@ function setMousePosition(e) {
     mouseY = e.clientY - canvasPos.y;
 
     for(var i = 0; i < objectivesList.length; i++) {
-        // if (mouseX + mouseY == objectivesList[i].x + objectivesList[i].y &&
-        //     mouseX != objectivesList[i].y &&
-        //     mouseY != objectivesList[i].x) {
-        //     objectivesList.splice(i, 1);
-        //     objectivesCounter++;
-        //     checkWin();
-        //     console.log('object removed');
-        // }
 
-
-        if (mouseX + mouseY == objectivesList[i].x + objectivesList[i].y &&
-            mouseY != mouseX && mouseX != mouseY) {
+        if (mouseX  + mouseY === objectivesList[i].x + objectivesList[i].y &&
+            mouseX != mouseY && mouseY != objectivesList[i].x && mouseX != objectivesList[i].y) {
             objectivesList.splice(i, 1);
             objectivesCounter++;
             console.log('object removed');
