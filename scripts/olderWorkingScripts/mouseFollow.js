@@ -25,9 +25,10 @@ function setMousePosition(e) {
     mouseY = e.clientY - canvasPos.y;
 
     for(var i = 0; i < objectivesList.length; i++) {
-
-        if (mouseX  + mouseY === objectivesList[i].x + objectivesList[i].y &&
-            mouseX != mouseY && mouseY != objectivesList[i].x && mouseX != objectivesList[i].y) {
+        // collision detection between user and objectives
+        // this is buggy
+        if (mouseX  + mouseY === objectivesList[i].x - objectivesList[i].y &&
+            mouseY - mouseX != objectivesList[i].x - objectivesList[i].y) {
             objectivesList.splice(i, 1);
             objectivesCounter++;
             console.log('object removed');
@@ -49,6 +50,10 @@ function buildCircle() {
     ctx.shadowBlur = 10;
     ctx.shadowColor = heroShadow;
     requestAnimationFrame(buildCircle);
+}
+
+for(var i=0; i < objectivesList.length; i++){
+
 }
 
 var pointer = buildCircle();

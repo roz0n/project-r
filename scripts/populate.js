@@ -29,7 +29,7 @@ function Enemy(x, y, wh, xSpeed, ySpeed, damage) {
 }
 
 for (j=0; j < 7; j++) {
-    enemiesList.push(new Enemy(enemyRange(50,400), enemyRange(50,400), 50, enemyRange(2,3), enemyRange(2,3), 1));
+    enemiesList.push(new Enemy(enemyRange(50,400), enemyRange(50,400), 50, enemyRange(1,2), enemyRange(1,2), 1));
 }
 
 function drawEnemies(){
@@ -71,21 +71,11 @@ function detectCollision(){
     }
 }
 
-// function detectObjectiveCollision(){
-//
-//     for(j=0; j < objectivesList.length; j++) {
-//
-//         if () {
-//
-//         }
-//     }
-// }
-
 // These are the functions for the objectives
 
 function objectiveRange(min, max) {
     var value = Math.random()*(max-min) + min;
-    return Math.round(value);
+    return Math.round((value/10) * 10);
 }
 
 // This is the constructor for the objectives
@@ -125,8 +115,10 @@ function draw() {
     animateEnemies();
     ctx2.fillStyle = 'rgba(102,54,232, 0.3)';
     ctx2.fillRect(0, 0, 500, 500);
+    var pointer = new User(150,350,10).draw();
     raf = window.requestAnimationFrame(draw);
     detectCollision();
 }
 
 draw();
+

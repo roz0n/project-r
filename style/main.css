@@ -16,7 +16,7 @@ body {
 div#container{
     width: 500px;
     height: 500px;
-    cursor: none;
+    /*cursor: none;*/
     transform: translate3d(0, 0, 0);
 }
 
@@ -32,7 +32,12 @@ canvas#objectives {
     position: absolute;
 }
 
-canvas#pointer {
+/*canvas#pointer {*/
+    /*z-index: 2;*/
+    /*position: absolute;*/
+/*}*/
+
+canvas#user {
     z-index: 2;
     position: absolute;
 }
