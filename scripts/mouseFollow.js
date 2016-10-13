@@ -67,4 +67,39 @@ function getPosition(el) {
     };
 }
 
+function detectMouseCollision(){
 
+    for(var j=0; j < enemiesList.length; j++){
+        if(mouseX == enemiesList[j].x + enemiesList[j].wh &&
+            mouseY == enemiesList[j].y + enemiesList[j].wh){
+            console.log('This is a massive collision');
+        }
+    }
+}
+
+detectMouseCollision();
+
+
+
+
+
+
+
+
+
+
+// if (enemiesList[j].y + enemiesList[j].ySpeed + 50 > 500 ||
+//     enemiesList[j].y + enemiesList[j].ySpeed <= 0 ||
+//     enemiesList[j].y + enemiesList[j].ySpeed - 50 > 500 ||
+//     enemiesList[j].y + enemiesList[j].ySpeed < 0 ) {
+//     // console.log('y collision is working');
+//     enemiesList[j].ySpeed = -enemiesList[j].ySpeed;
+// }
+//
+// if (enemiesList[j].x + enemiesList[j].xSpeed + 50 > 500 ||
+//     enemiesList[j].x + enemiesList[j].xSpeed <= 0 ||
+//     enemiesList[j].x + enemiesList[j].xSpeed > 500 ||
+//     enemiesList[j].x + enemiesList[j].xSpeed < 0) {
+//     // console.log('x collision is working');
+//     enemiesList[j].xSpeed = -enemiesList[j].xSpeed;
+// }

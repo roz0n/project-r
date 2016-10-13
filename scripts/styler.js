@@ -12,4 +12,3 @@ function styleChanger(colorBG, colorBR, colorHero, colorShadow, markersColor){
     heroShadow = colorShadow;
     return true;
 }
-
