@@ -75,7 +75,7 @@ function detectCollision(){
 
 function objectiveRange(min, max) {
     var value = Math.random()*(max-min) + min;
-    return Math.round((value/10) * 10);
+    return 20 * Math.round(value/20);
 }
 
 // This is the constructor for the objectives
@@ -98,7 +98,7 @@ function Objective(x, y, r){
 // This is creating the objectives and pushing it into the array
 
 for(var i=0; i < 10; i++) {
-    objectivesList.push(new Objective(objectiveRange(50, 490), objectiveRange(50,490), 8));
+    objectivesList.push(new Objective(objectiveRange(50, 450), objectiveRange(50,450), 10));
 }
 
 function drawObjectives(){
@@ -107,20 +107,73 @@ function drawObjectives(){
     }
 }
 
+function checkDetection2() {
+    for (var m = 0; m < objectivesList.length; m++) {
+        if(pointer.x == objectivesList[m].x &&
+            pointer.y == objectivesList[m].y) {
+            objectivesList.splice(m, 1);
+            objectivesCounter++;
+            checkWin();
+            ctx2.fillStyle = 'white';
+            ctx2.fillRect(0, 0, 500, 500);
+            console.log('Obtained objective!');
+        }
+    }
+}
+
+function checkDetection3() {
+
+    for(var g = 0; g < enemiesList.length; g++){
+
+        var distX = Math.abs(pointer.x - enemiesList[g].x - enemiesList[g].wh/2);
+        var distY = Math.abs(pointer.y - enemiesList[g].y - enemiesList[g].wh/2);
+
+        if (distX > (enemiesList[g].wh/2 + pointer.r)) {
+            return false;
+        }
+
+        if(distY > (enemiesList[g].wh/2 + pointer.r)){
+            return false;
+        }
+
+        if(distX <= (enemiesList[g].wh/2)){
+            console.log('Definitely colliding');
+            return true;
+        }
+
+        if(distY <= (enemiesList[g].wh/2)){
+            console.log('Definitely colliding');
+            return true;
+        }
+
+        var dx = distX - enemiesList[g].wh/2;
+        var dy = distY - enemiesList[g].wh/2;
+        // return (dx * dx + dy * dy <= (pointer.r * pointer.r));
+
+    }
+}
+
 // This is drawing the objects ultimately
 
-var pointer = new User(150,350,10);
+var pointer = new User(0,0,10);
 
 function draw() {
     drawObjectives();
     drawEnemies();
     animateEnemies();
+    pointer.draw();
     ctx2.fillStyle = 'rgba(102,54,232, 0.3)';
     ctx2.fillRect(0, 0, 500, 500);
-    pointer.draw();
     raf = window.requestAnimationFrame(draw);
     detectCollision();
+    checkDetection2();
+    checkDetection3();
 }
 
 draw();
+
+
+// new collisions
+
+
 
