@@ -9,14 +9,21 @@
 	<div id="title-wrapper" class="show">
 		<h1>project - R</h1>
 		<button id="game-start" type="button">Start Game</button>
-		<p class="story">Lost in space, you've crash landed on a foreign planet. Use your keyboard to avoid the evil square inhabitants. Collect all the circular fuel lozenges to safely return to your hot alien wife R'za.</p>
+		<p class="story">Lost in space, you've crash landed on a foreign planet and shrunk to the size of bacteria. Use your keyboard to avoid the evil square amoeba. Collect all the circular power-ups to return to your normal size and home to your hot alien wife R'z&auml;.</p>
 		<h2>[alpha v. 0.1]</h2>
+	</div>
+
+	<div id="end-wrapper" class="hide">
+		<p id="end-title" class="end">Game Over</p>
+		<p id="end-score-header" class="end">Final Score</p>
+		<p id="final-score"></p>
 	</div>
 
 	<div id="container">
 		<canvas width="500" id="hyperSpace" height="500" class="show"></canvas>
 		<canvas width="500" id="enemies" height="500"></canvas>
 		<canvas width="500" id="user" height="500"></canvas>
+		<canvas width="500" id="simplyBorder" height="500" class="hide"></canvas>
 
 		<div id="info">
 			<h3 id="score" class="markers">Score: <span class="number">0</span>&nbsp;&nbsp;&nbsp;</h3>

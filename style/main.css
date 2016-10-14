@@ -20,6 +20,12 @@ div#container{
     /*transform: translate3d(0, 0, 0);*/
 }
 
+canvas#simplyBorder {
+    z-index: -5;
+    position: absolute;
+    border: 1px solid aquamarine;
+}
+
 
 canvas#enemies {
     z-index: 0;
@@ -85,6 +91,28 @@ div#title-wrapper {
     left: 75px;
     top: 118px;
     z-index: 5;
+}
+
+div#end-wrapper {
+    position: absolute;
+    text-align: center;
+    z-index: 5;
+    color: white;
+    text-transform: uppercase;
+    margin-top: 137px;
+}
+
+#end-title, #end-score-header, #final-score {
+    margin-left: 190px;
+}
+
+p#final-score {
+    font-size: 65px;
+    margin-top: 0;
+}
+
+p#end-score-header {
+    margin-bottom: 0;
 }
 
 h1 {
