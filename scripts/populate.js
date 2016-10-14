@@ -1,5 +1,7 @@
 console.log('Game board is populated');
 
+audio2.play();
+
 var canvas = document.querySelector('#enemies');
 var ctx2 = canvas.getContext('2d');
 var enemiesList = [];
@@ -28,12 +30,12 @@ function Enemy(x, y, wh, xSpeed, ySpeed, damage) {
     }
 }
 
-for (j=0; j < 10; j++) {
+for (j=0; j < 7; j++) {
     enemiesList.push(new Enemy(enemyRange(50,400), enemyRange(50,400), 50, enemyRange(1,2), enemyRange(1,2), 1));
 }
 
 function drawEnemies(){
-    for (j=0; j < 10; j++) {
+    for (j=0; j < 7; j++) {
         enemiesList[j].draw();
     }
 }
@@ -111,6 +113,7 @@ function checkDetection2() {
         if(pointer.x == objectivesList[m].x &&
             pointer.y == objectivesList[m].y) {
             objectivesList.splice(m, 1);
+            audio.play();
             objectivesCounter ++;
             checkWin();
             ctx2.fillStyle = 'white';

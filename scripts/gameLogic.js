@@ -13,6 +13,12 @@ var enemiesBoard = document.querySelector('#enemies');
 var userBoard = document.querySelector('#user');
 var finalBorder = document.querySelector('#simplyBorder');
 
+
+var audio = new Audio('sounds/objective.mp3');
+var audio2 = new Audio('sounds/take.mp3');
+var audio3 = new Audio('sounds/end.mp3');
+
+
 function gameStart() {
     titleScreen.className = 'hide';
     titleScreenBg.className = 'hide';
@@ -26,6 +32,8 @@ function gameEnd() {
     finalBorder.className = 'show';
     userBoard.className = 'hide';
     finalScore.innerHTML = scoreCounter;
+    audio2.pause();
+    audio3.play();
 }
 
 startButton.addEventListener("click", gameStart);
