@@ -14,9 +14,9 @@ var userBoard = document.querySelector('#user');
 var finalBorder = document.querySelector('#simplyBorder');
 
 
-var audio = new Audio('sounds/objective2.mp3');
+var audio = new Audio('sounds/objective.wav');
 var audio2 = new Audio('sounds/take.mp3');
-var audio3 = new Audio('sounds/end.mp3');
+var audio3 = new Audio('sounds/tiger.mp3');
 
 
 function gameStart() {
@@ -60,3 +60,8 @@ function scoringSystem(){
     scoreCounter = objectivesCounter * 10;
     scoringChart.innerHTML = 'Score: ' + '<span class="number">' + scoreCounter + '</span>';
 }
+
+// function takeHit() {
+//     scoreCounter = objectivesCounter - 5;
+//     scoringChart.innerHTML = 'Score: ' + '<span class="number">' + scoreCounter + '</span>';
+// }

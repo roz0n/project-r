@@ -108,7 +108,7 @@ function drawObjectives(){
     }
 }
 
-function checkDetection2() {
+function detectCollision2() {
     for (var m = 0; m < objectivesList.length; m++) {
         if(pointer.x == objectivesList[m].x &&
             pointer.y == objectivesList[m].y) {
@@ -123,36 +123,52 @@ function checkDetection2() {
     }
 }
 
-function checkDetection3() {
 
+function someFunc(pointer, enemiesList) {
+
+    var distX = Math.abs(pointer.x - enemiesList.x);
+    var distY = Math.abs(pointer.y - enemiesList.y);
+
+    if (distX > (enemiesList.wh/2 + pointer.r)) {
+        // console.log('None');
+        return false;
+    }
+
+    if(distY > (enemiesList.wh/2 + pointer.r)){
+        // console.log('None');
+        return false;
+    }
+
+    if(distX < (enemiesList.wh/2 + pointer.r)){
+        console.log('Definitely colliding');
+        ctx2.globalAlpha=0.5;
+        ctx2.fillStyle = 'rgb(255, 0, 0)';
+        ctx2.fillRect(0, 0, 500, 500);
+        ctx2.globalAlpha=1;
+        return true;
+    }
+
+    if(distY < (enemiesList.wh/2 + pointer.r)){
+        console.log('Definitely colliding');
+        console.log(distY, enemiesList.wh/2);
+        ctx2.globalAlpha=0.5;
+        ctx2.fillStyle = 'rgb(255, 0, 0)';
+        ctx2.fillRect(0, 0, 500, 500);
+        ctx2.globalAlpha=1;
+        return true;
+    }
+
+    var hypot = (distX - enemiesList.wh/2) * (distX - enemiesList/2) +
+        (distY - enemiesList.wh/2) * (distY - enemiesList/2);
+
+    console.log(hypot <= (pointer.r*pointer.r));
+    return (hypot <= (pointer.r*pointer.r));
+
+}
+
+function detectCollision3() {
     for(var g = 0; g < enemiesList.length; g++){
-
-        var distX = Math.abs(pointer.x - enemiesList[g].x - enemiesList[g].wh/2);
-        var distY = Math.abs(pointer.y - enemiesList[g].y - enemiesList[g].wh/2);
-
-        if (distX > (enemiesList[g].wh/2 + pointer.r)) {
-            console.log('None');
-            return false;
-        }
-
-        if(distY > (enemiesList[g].wh/2 + pointer.r)){
-            console.log('None');
-            return false;
-        }
-
-        if(distX <= (enemiesList[g].wh/2)){
-            console.log('Definitely colliding');
-            ctx2.fillStyle = 'rgb(255, 0, 0)';
-            ctx2.fillRect(0, 0, 500, 500);
-            // return true;
-        }
-
-        if(distY <= (enemiesList[g].wh/2)){
-            console.log('Definitely colliding');
-            ctx2.fillStyle = 'rgb(255, 0, 0)';
-            ctx2.fillRect(0, 0, 500, 500);
-            // return true;
-        }
+        someFunc(pointer, enemiesList[g]);
     }
 }
 
@@ -167,8 +183,9 @@ function draw() {
     animateEnemies();
     ctx2.fillStyle = 'rgba(102,54,232, 0.3)';
     ctx2.fillRect(0, 0, 500, 500);
-    raf = window.requestAnimationFrame(draw);
     detectCollision();
-    checkDetection2();
-    checkDetection3();
+    detectCollision2();
+    detectCollision3();
+    raf = window.requestAnimationFrame(draw);
+
 }
