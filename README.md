@@ -11,5 +11,4 @@ Lost in space, you've crash landed on a foreign planet and shrunk to the size of
 
 ---
 
-Best viewed with the beautiful Akkurat Mono font installed. (sorry lol)
-[a link](http://rozon.org/fonts/Akkurat-Mono.ttf)
+Best viewed with the beautiful Akkurat Mono font installed. [sorry lol](http://rozon.org/fonts/Akkurat-Mono.ttf)
