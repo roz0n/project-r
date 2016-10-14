@@ -12,7 +12,6 @@ function gameStart() {
     titleScreen.className = 'hide';
     titleScreenBg.className = 'hide';
     draw();
-    checkDetection3();
 }
 
 startButton.addEventListener("click", gameStart);

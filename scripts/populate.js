@@ -167,4 +167,5 @@ function draw() {
     raf = window.requestAnimationFrame(draw);
     detectCollision();
     checkDetection2();
+    checkDetection3();
 }
