@@ -50,8 +50,9 @@ canvas#user {
 
 div#info {
     position: absolute;
+    width: 480px;
     top: 525px;
-    left: 7%;
+    padding: 10px;
 }
 
 .markers {
@@ -70,8 +71,12 @@ div#info {
     /*user-select: none;*/
 }
 
-h6#health {
-    margin-left: 100px;
+.number {
+    color: white;
+}
+
+h6#level {
+   float: right;
 }
 
 div#title-wrapper {

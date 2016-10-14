@@ -24,6 +24,22 @@ function moveSomething(e) {
             break;
     }
     e.preventDefault();
+
+    if (pointer.x == 500) {
+        pointer.x = pointer.x - 20;
+    }
+
+    if (pointer.y == 500) {
+        pointer.y = pointer.y -20;
+    }
+
+    if(pointer.x == 0) {
+        pointer.x = pointer.x + 20;
+    }
+
+    if (pointer.y == 0) {
+        pointer.y = pointer.y + 20;
+    }
 }
 
 function User(x, y, r){
