@@ -14,7 +14,7 @@ var userBoard = document.querySelector('#user');
 var finalBorder = document.querySelector('#simplyBorder');
 
 
-var audio = new Audio('sounds/objective.mp3');
+var audio = new Audio('sounds/objective2.mp3');
 var audio2 = new Audio('sounds/take.mp3');
 var audio3 = new Audio('sounds/end.mp3');
 
