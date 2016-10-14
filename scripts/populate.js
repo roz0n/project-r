@@ -129,20 +129,26 @@ function checkDetection3() {
         var distY = Math.abs(pointer.y - enemiesList[g].y - enemiesList[g].wh/2);
 
         if (distX > (enemiesList[g].wh/2 + pointer.r)) {
+            console.log('None');
             return false;
         }
 
         if(distY > (enemiesList[g].wh/2 + pointer.r)){
+            console.log('None');
             return false;
         }
 
         if(distX <= (enemiesList[g].wh/2)){
             console.log('Definitely colliding');
+            ctx2.fillStyle = 'red';
+            ctx2.fillRect(0, 0, 500, 500);
             return true;
         }
 
         if(distY <= (enemiesList[g].wh/2)){
             console.log('Definitely colliding');
+            ctx2.fillStyle = 'red';
+            ctx2.fillRect(0, 0, 500, 500);
             return true;
         }
 
@@ -170,7 +176,7 @@ function draw() {
     checkDetection3();
 }
 
-draw();
+// draw();
 
 
 // new collisions

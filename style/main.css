@@ -15,9 +15,9 @@ body {
 
 div#container{
     width: 500px;
-    height: 500px;
+    /*height: 500px;*/
     /*cursor: none;*/
-    transform: translate3d(0, 0, 0);
+    /*transform: translate3d(0, 0, 0);*/
 }
 
 
@@ -25,6 +25,12 @@ canvas#enemies {
     z-index: 0;
     position: absolute;
     border: 1px solid aquamarine;
+}
+
+canvas#hyperSpace {
+    z-index: 4;
+    position: absolute;
+    /*border: 1px solid aquamarine;*/
 }
 
 canvas#objectives {
@@ -57,13 +63,59 @@ div#info {
     font-size: 13px;
     text-transform: uppercase;
     /*these are the disable text select unique identifiers*/
-    -webkit-touch-callout: none;
-    -webkit-user-select: none;
-    -moz-user-select: none;
-    -ms-user-select: none;
-    user-select: none;
+    /*-webkit-touch-callout: none;*/
+    /*-webkit-user-select: none;*/
+    /*-moz-user-select: none;*/
+    /*-ms-user-select: none;*/
+    /*user-select: none;*/
 }
 
 h6#health {
     margin-left: 100px;
+}
+
+div#title-wrapper {
+    position: absolute;
+    text-align: center;
+    left: 75px;
+    top: 118px;
+    z-index: 5;
+}
+
+h1 {
+    color: white;
+    font-size: 52px;
+}
+
+h2 {
+    color: white;
+    font-size: 10px;
+    margin-top: 50px;
+}
+
+button#game-start {
+    padding: 10px;
+    border: 3px solid white;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Akkurat-Mono', monospace;
+    font-size: 14px;
+    background-color: transparent;
+    left: 25%;
+    top: 55%;
+}
+
+button#game-start:hover {
+    background-color: white;
+    color: rgb(102,54,232);
+}
+
+.show {
+    display: block;
+    visibility: visible;
+}
+
+.hide {
+    display: none;
+    visibility: hidden;
 }

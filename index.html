@@ -6,13 +6,19 @@
 </head>
 <body>
 
-	<div id="container">
+	<div id="title-wrapper" class="show">
+		<h1>project - R</h1>
+		<button id="game-start" type="button">Start Game</button>
+		<h2>[alpha v. 0.1]</h2>
+	</div>
 
+	<div id="container">
+		<canvas width="500" id="hyperSpace" height="500" class="show"></canvas>
 		<canvas width="500" id="enemies" height="500"></canvas>
 		<canvas width="500" id="user" height="500"></canvas>
 
 		<div id="info">
-			<h3 id="score" class="markers">Score: 0&nbsp;</h3>
+			<h3 id="score" class="markers">Score: 0</h3>
 			<h4 id="timer" class="markers">&nbsp;Time: 15s&nbsp;</h4>
 			<h5 id="level" class="markers">&nbsp;Shields: 100</h5>
 			<h6 id="health" class="markers">Level 1</h6>
@@ -20,6 +26,7 @@
 
 	</div>
 
+	<script src="scripts/hyperSpace.js"></script>
 	<script src="scripts/gameLogic.js"></script>
 	<script src="scripts/user.js"></script>
 	<script src="scripts/populate.js"></script>
