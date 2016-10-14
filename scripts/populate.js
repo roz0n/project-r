@@ -89,7 +89,7 @@ function Objective(x, y, r){
         ctx2.arc(this.x, this.y, this.r, 0, 2 * Math.PI, true);
         // x-cor, y-cor, radius, starting angle 0 is 3'oclock, end angle
         // true or false is clockwise or counterclockwise
-        ctx2.fillStyle = 'magenta';
+        ctx2.fillStyle = 'rgb(255,59,136)';
         ctx2.fill();
     }
 }

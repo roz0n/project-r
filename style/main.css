@@ -1,12 +1,12 @@
-/*@font-face {*/
-    /*font-family: 'Akkurat-Mono';*/
-    /*src: url('http://rozon.org/fonts/Akkurat-Mono.eot'); !* IE9 Compat Modes *!*/
-    /*src: url('http://rozon.org/fonts/Akkurat-Mono?#iefix') format('embedded-opentype'), !* IE6-IE8 *!*/
-    /*url('http://rozon.org/fonts/Akkurat-Mono.woff2') format('woff2'), !* Super Modern Browsers *!*/
-    /*url('http://rozon.org/fonts/Akkurat-Mono.woff') format('woff'), !* Pretty Modern Browsers *!*/
-    /*url('http://rozon.org/fonts/Akkurat-Mono.ttf')  format('truetype'), !* Safari, Android, iOS *!*/
-    /*url('http://rozon.org/Akkurat-Mono.svg#svgFontName') format('svg'); !* Legacy iOS *!*/
-/*}*/
+@font-face {
+    font-family: 'Akkurat-Mono';
+    src: url('http://rozon.org/fonts/Akkurat-Mono.eot'); /* IE9 Compat Modes */
+    src: url('http://rozon.org/fonts/Akkurat-Mono?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+    url('http://rozon.org/fonts/Akkurat-Mono.woff2') format('woff2'), /* Super Modern Browsers */
+    url('http://rozon.org/fonts/Akkurat-Mono.woff') format('woff'), /* Pretty Modern Browsers */
+    url('http://rozon.org/fonts/Akkurat-Mono.ttf')  format('truetype'), /* Safari, Android, iOS */
+    url('http://rozon.org/Akkurat-Mono.svg#svgFontName') format('svg'); /* Legacy iOS */
+}
 
 body {
     background-color: rgb(102,54,232);
@@ -111,8 +111,12 @@ p#final-score {
     margin-top: 0;
 }
 
-p#end-score-header {
+p#end-title {
     margin-bottom: 0;
+}
+
+p#end-score-header {
+    margin-top: 0;
 }
 
 h1 {

@@ -49,9 +49,7 @@ function User(x, y, r){
     this.draw = function() {
         ctx2.beginPath();
         ctx2.arc(this.x, this.y, this.r, 0, 2 * Math.PI, true);
-        // x-cor, y-cor, radius, starting angle 0 is 3'oclock, end angle
-        // true or false is clockwise or counterclockwise
-        ctx2.fillStyle = 'orange';
+        ctx2.fillStyle = 'yellow';
         ctx2.fill();
     }
 }

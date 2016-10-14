@@ -41,6 +41,7 @@ function checkWin() {
         console.log('You win!');
         scoringSystem();
         gameEnd();
+
     } else {
         console.log('You have not won yet');
         scoringSystem();
