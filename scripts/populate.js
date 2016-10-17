@@ -129,32 +129,38 @@ function someFunc(pointer, enemiesList) {
     var distX = Math.abs(pointer.x - enemiesList.x);
     var distY = Math.abs(pointer.y - enemiesList.y);
 
-    if (distX > (enemiesList.wh/2 + pointer.r)) {
+    if (distX > (enemiesList.wh/2 + 5)) {
         // console.log('None');
         return false;
     }
 
-    if(distY > (enemiesList.wh/2 + pointer.r)){
+    if(distY > (enemiesList.wh/2 + 5)){
         // console.log('None');
         return false;
     }
 
-    if(distX < (enemiesList.wh/2 + pointer.r)){
+    if(distX < (enemiesList.wh/2 + 5)){
         console.log('Definitely colliding');
         ctx2.globalAlpha=0.5;
         ctx2.fillStyle = 'rgb(255, 0, 0)';
         ctx2.fillRect(0, 0, 500, 500);
         ctx2.globalAlpha=1;
+        healthCounter -= 1;
+        healthCheck();
+        console.log(healthCounter);
         return true;
     }
 
-    if(distY < (enemiesList.wh/2 + pointer.r)){
+    if(distY < (enemiesList.wh/2 + 5)){
         console.log('Definitely colliding');
         console.log(distY, enemiesList.wh/2);
         ctx2.globalAlpha=0.5;
         ctx2.fillStyle = 'rgb(255, 0, 0)';
         ctx2.fillRect(0, 0, 500, 500);
         ctx2.globalAlpha=1;
+        healthCounter -= 1;
+        healthCheck();
+        console.log(healthCounter);
         return true;
     }
 
@@ -186,6 +192,7 @@ function draw() {
     detectCollision();
     detectCollision2();
     detectCollision3();
+    healthSystem();
     raf = window.requestAnimationFrame(draw);
 
 }

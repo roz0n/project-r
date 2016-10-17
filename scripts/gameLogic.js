@@ -1,7 +1,3 @@
-// window.onload = function(){
-//     window.alert('Collect all the dots');
-// };
-
 var startButton = document.querySelector('#game-start');
 var titleScreen = document.querySelector('#title-wrapper');
 var titleScreenBg = document.querySelector('#hyperSpace');
@@ -45,23 +41,29 @@ var healthCounter = 100;
 
 function checkWin() {
     if (objectivesCounter === 20) {
-        // window.alert('You win!');
         console.log('You win!');
+        healthSystem();
         scoringSystem();
         gameEnd();
 
     } else {
         console.log('You have not won yet');
+        healthSystem();
         scoringSystem();
     }
 }
 
 function scoringSystem(){
     scoreCounter = objectivesCounter * 10;
-    scoringChart.innerHTML = 'Score: ' + '<span class="number">' + scoreCounter + '</span>';
+    scoringChart.innerHTML = 'Score: ' + '<span class="number">' + scoreCounter + '</span>' + '&nbsp;&nbsp;&nbsp;';
 }
 
-// function takeHit() {
-//     scoreCounter = objectivesCounter - 5;
-//     scoringChart.innerHTML = 'Score: ' + '<span class="number">' + scoreCounter + '</span>';
-// }
+function healthSystem() {
+    healthChart.innerHTML = '&nbsp;Shields: ' + '<span class="number">' + healthCounter + '</span>';
+}
+
+function healthCheck(){
+    if(healthCounter < 0){
+        gameEnd();
+    }
+}
