@@ -59,7 +59,15 @@ function scoringSystem(){
 }
 
 function healthSystem() {
-    healthChart.innerHTML = '&nbsp;Shields: ' + '<span class="number">' + healthCounter + '</span>';
+
+    if(healthCounter > 0) {
+        healthChart.innerHTML = '&nbsp;Shields: ' + '<span class="number">' + healthCounter + '</span>';
+    } else if(healthCounter < 0) {
+        healthChart.innerHTML = '&nbsp;Shields: ' + '<span class="number">' + 0 + '</span>';
+    } else {
+        console.log('You\'re out of health');
+    }
+
 }
 
 function healthCheck(){

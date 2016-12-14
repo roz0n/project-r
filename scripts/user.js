@@ -49,7 +49,7 @@ function User(x, y, r){
     this.draw = function() {
         ctx2.beginPath();
         ctx2.arc(this.x, this.y, this.r, 0, 2 * Math.PI, true);
-        ctx2.fillStyle = 'yellow';
+        ctx2.fillStyle = 'white';
         ctx2.fill();
     }
 }
