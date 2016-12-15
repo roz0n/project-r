@@ -88,9 +88,10 @@ h6#level {
 div#title-wrapper {
     position: absolute;
     text-align: center;
-    left: 75px;
-    top: 78px;
     z-index: 5;
+    color: white;
+    text-transform: uppercase;
+    margin: 53px 0 0 75px;
 }
 
 div#end-wrapper {
@@ -175,4 +176,11 @@ button#game-start:hover {
 
 .clear-link {
     color: white;
+}
+
+#main-container {
+    margin: 0 auto;
+    height: 100vh;
+    width: 600px;
+    padding-top: 50px;
 }
