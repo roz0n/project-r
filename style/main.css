@@ -152,6 +152,25 @@ button#game-start {
 button#game-start:hover {
     background-color: white;
     color: rgb(102,54,232);
+    cursor: pointer;
+}
+
+div.mute-button {
+    padding: 5px;
+    border: 3px solid white;
+    color: white;
+    text-transform: uppercase;
+    font-family: 'Akkurat-Mono', monospace;
+    font-size: 14px;
+    background-color: transparent;
+    width: 50px;
+    margin: 0 auto;
+}
+
+div.mute-button:hover {
+    background-color: white;
+    color: rgb(102,54,232);
+    cursor: pointer;
 }
 
 .show {

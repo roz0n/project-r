@@ -11,6 +11,7 @@
 		<p class="story">Directions: <br/> Using your arrow keys, retrieve all of the red circles while avoiding the dastardly blue squares! This alpha version contains only one level so do your best :)</p>
 		<button id="game-start" type="button">Start Game</button>
 		<h2>[alpha v. 0.1]</h2>
+		<div class="mute-button" onclick="pauseSong()">Mute</div>
 	</div>
 
 	<div id="end-wrapper" class="hide">
@@ -34,6 +35,15 @@
 		</div>
 	</div>
 </div>
+	<script>
+		function pauseSong() {
+			if(audio2.paused){
+				audio2.play();
+			} else {
+				audio2.pause();
+			}
+		}
+	</script>
 	<script src="scripts/hyperSpace.js"></script>
 	<script src="scripts/gameLogic.js"></script>
 	<script src="scripts/user.js"></script>

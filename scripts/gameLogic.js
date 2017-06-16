@@ -14,6 +14,13 @@ var audio = new Audio('sounds/objective.wav');
 var audio2 = new Audio('sounds/take.mp3');
 var audio3 = new Audio('sounds/tiger.mp3');
 
+// function pauseSong() {
+//     if(audio2.paused){
+//         audio2.play();
+//     } else {
+//         audio2.pause();
+//     }
+// }
 
 function gameStart() {
     titleScreen.className = 'hide';
