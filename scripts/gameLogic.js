@@ -27,6 +27,7 @@ function gameEnd() {
     enemiesBoard.className = 'hide';
     finalBorder.className = 'show';
     userBoard.className = 'hide';
+    healthChart.className = 'hide';
     finalScore.innerHTML = scoreCounter;
     audio2.pause();
     audio3.play();
