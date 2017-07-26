@@ -1,5 +1,4 @@
 # rtrvl
-___
 
 ![rtrvl](./screenshot.png)
 
